@@ -23,4 +23,12 @@ public class ProduitController {
   public List<ProduitEntity>all(){
     return produitService.getAll().get();
   }
+  @PutMapping
+  public ProduitEntity update(String ref,ProduitEntity produitEntity){
+    return produitService.update(ref,produitEntity);
+  }
+  @DeleteMapping
+  public void delete(String ref){
+    produitService.delete(ref);
+  }
 }
